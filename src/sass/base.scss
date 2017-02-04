@@ -231,10 +231,6 @@ header {
   }
 }
 @media screen and (max-width: 479px) {
-  nav li{
-    padding: 10px 5px;
-  }
-
   .crop {
     width: 100%;
     height: 200px;
@@ -245,10 +241,6 @@ header {
   }
 }
 @media screen and (max-width: 359px) {
-  nav li{
-    padding: 10px 2px;
-  }
-
   .crop {
     border-width: 10pxt;
   }
