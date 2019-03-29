@@ -7,20 +7,20 @@
 	<title>BvB</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="shortcut icon" href="src/img/favicon.ico">
-	
+
 	<link href="dist/css/base.min.css" rel="stylesheet" type="text/css" />
 	<link href="src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="src/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
 	<script src="dist/js/main.min.js" type="text/javascript"></script>
-	
+
 	<!-- Lightbox by Lokesh Dhakar -->
 	<link href="src/lightbox/lightbox.css" rel="stylesheet" />
 	<script src="src/lightbox/lightbox-2.6.min.js"></script>
-	
+
 </head>
 
 <body>
@@ -28,13 +28,16 @@
 		<nav>
 			<ul>
 				<li>
+					<h1><a href="">Bridget van Breemen</a></h1>
+				</li>
+				<li>
 					<a href="#about" class="anchor-link">About</a>
 				</li>
 				<li>
-					<a href="#art" class="anchor-link">Art</a>
+					<a href="#projects" class="anchor-link">Interactive</a>
 				</li>
 				<li>
-					<a href="#projects" class="anchor-link">Code</a>
+					<a href="#comics" class="anchor-link">Comics</a>
 				</li>
 			</ul>
 		</nav>
@@ -48,128 +51,111 @@
 		<div class="visible-xs">
 			<img class="img-responsive" src="src/img/jackalope-crowd-banner-sm.png" />
 		</div>
-		<h1>Bridget van Breemen</h1>
 	</div>
 
 	<div class="main-section">
+
 		<div id="about" class="about-section anchor bottom-border row">
 			<h2>About</h2>
-			<div class="col-sm-3 col-xs-12">
-				<img class="self-portrait img-responsive center-block" src="src/img/self-brownHair.png" alt="illustration of Bridget" />
-			</div>
 			<div class="col-sm-9 col-xs-12">
-				<p><strong>Bridget van Breemen</strong> is a software developer, UI designer, and artist currently based in Chicago.</p>
+				<p><strong>Bridget van Breemen</strong> is a web and game developer, user interface designer, and
+					multi-media artist
+					currently based in Chicago.</p>
 				<p>Contact: <a href="mailto:bridget.vanbreemen@gmail.com">bridget.vanbreemen@gmail.com</a></p>
+
+				<div class="social">
+					<a href="https://github.com/bvanbree" class="fade">
+						<img src="src/img/github.png" alt="GitHub" title="GitHub" />
+						GitHub
+					</a>
+					<a href="https://www.linkedin.com/in/bridgetvanbreemen" class="fade">
+						<img src="src/img/linkedin.png" alt="LinkedIn" title="LinkedIn" />
+						LinkedIn
+					</a>
+					<a href="https://codepen.io/bvanbree/" class="fade">
+						<img src="src/img/codepen.png" alt="CodePen" title="CodePen" />
+						CodePen
+					</a>
+
+				</div>
 			</div>
-			<div class="social">
-				<a href="https://www.linkedin.com/in/bridgetvanbreemen">
-					<img src="src/img/linkedin.png" alt="LinkedIn" title="LinkedIn" />
-				</a>
-				<a href="https://codepen.io/bvanbree/">
-					<img src="src/img/codepen.png" alt="CodePen" title="CodePen" />
-				</a>
-				<a href="https://github.com/bvanbree">
-					<img src="src/img/github.png" alt="GitHub" title="GitHub" />
-				</a>
+			<div class="col-sm-3 col-xs-12">
+				<img class="self-portrait img-responsive center-block" src="src/img/self-brownHair.png"
+					alt="illustration of Bridget" />
 			</div>
 		</div>
 
-		<div id="art" class="anchor bottom-border row">
-			<h2>Art</h2>
+		<div id="projects" class="anchor bottom-border row">
+			<h2>Interactive Projects</h2>
+
+			<div class="project-card col-md-12">
+				<h3>3D Scan Stations</h3>
+				<p class="project-description">A pair of touch-screen kiosk applications for exploring 3D scans of a
+					brain and
+					a fossilized skeleton of two dinosaurs. Features include rotatable 3D models with labelled
+					features, multi-touch and single-touch zooming, and multiple language options.</p>
+				<p>Part of the Antarctic Dinosaurs exhibit developed
+					by the Field Museum of Natural History. (2018)</p>
+				<a class="crop fade code" href="src/img/portfolio/code/brain-station-forebrain.jpg"
+					data-lightbox="slideshow">
+					<img src="src/img/portfolio/code/brain-station-forebrain.jpg" />
+				</a>
+				<a class="crop fade code" href="src/img/portfolio/code/skeleton-station-spine.jpg"
+					data-lightbox="slideshow">
+					<img src="src/img/portfolio/code/skeleton-station-spine.jpg" />
+				</a>
+
+			</div>
+		</div>
+
+		<div id="comics" class="anchor row">
+			<h2>Comics &amp; Sequential Art</h2>
+
+			<div class="project-card col-md-6">
+				<h3>Monster Portraits</h3>
+				<p>a series of 10 monster portraits drawn during October 2016 and compiled into a zine, ink on paper</p>
+				<a class="crop fade two-d" href="src/img/portfolio/art/monster-portraits-four-highlights.jpg"
+					data-lightbox="slideshow"
+					title="a selection of 4 drawings from the monster portraits series, ink on paper (2016)">
+					<img src="src/img/portfolio/art/monster-portraits-four-highlights.jpg" />
+				</a>
+			</div>
 
 			<div class="project-card col-md-6">
 				<h3>Sludge</h3>
-				<p>combining traditional drawings with databending</p>
-				<a class="crop fade two-d" href="src/img/portfolio/art/glitchmountain.jpg" data-lightbox="sludge" title="(1 of 3) An experiment in databending photos and mixed media">
-					<img src="src/img/portfolio/art/glitchmountain.jpg" />
-				</a>
-				<a class="crop fade two-d" href="src/img/portfolio/art/flowernoise.jpg" data-lightbox="sludge" title="(2 of 3) An experiment in databending photos and mixed media">
+				<p>an experiment to combine databending of photos and footage with ink drawings, displayed at the first
+					CS Community Art
+					Show at Oberlin College (2014)</p>
+				<a class="crop fade two-d" href="src/img/portfolio/art/sludgefeast.jpg" data-lightbox="slideshow"
+					title="an experiment to combine databending of photos and footage with ink drawings, displayed at the first CS Community Art Show at Oberlin College (2014)">
 					<img src="src/img/portfolio/art/flowernoise.jpg" />
 				</a>
-				<a class="crop fade two-d" href="src/img/portfolio/art/greenlightning.jpg" data-lightbox="sludge" title="(3 of 3) An experiment in databending photos and mixed media">
-					<img src="src/img/portfolio/art/greenlightning.jpg" />
-				</a>
 			</div>
 
 			<div class="project-card col-md-6">
-				<h3>Mint Rabbit</h3>
-				<p>how-to comics with mint rabbit</p>
-				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-clean-phone.png" data-lightbox="cards" title="">
+				<h3>Mint Rabbit How-To Comics</h3>
+				<p>a series of how-to comics featuring a green anthropomorphic rabbit, originally separate short comics
+					that were later compiled into a zine, mixed media on paper.</p>
+				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-clean-phone.png"
+					data-lightbox="slideshow" title="how to clean your phone">
 					<img src="src/img/portfolio/art/comics/how-to-clean-phone.png" />
 				</a>
-				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-open-letters.png" data-lightbox="cards" title="">
+				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-open-letters.png"
+					data-lightbox="slideshow" title="how to open letters">
 					<img src="src/img/portfolio/art/comics/how-to-open-letters.png" />
 				</a>
-				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-wine.png" data-lightbox="cards" title="">
+				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-wine.png"
+					data-lightbox="slideshow" title="how to taste wine">
 					<img src="src/img/portfolio/art/comics/how-to-wine.png" />
 				</a>
-				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/how-to-open-stubborn-boxes.png" data-lightbox="cards"
-					title="">
-					<img src="src/img/portfolio/art/comics/how-to-open-stubborn-boxes.png" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<h3>Cards</h3>
-				<p>a comic about memories of childhood games</p>
-				<p><a href="https://lagomorphous.tumblr.com/tagged/cards-comic">Read the full comic on my art blog</a></p>
-				<a class="crop fade two-d comics" href="src/img/portfolio/art/comics/cards03-04-spread.jpg" data-lightbox="cards" title="A 2-page spread from the comic, Cards">
-					<img src="src/img/portfolio/art/comics/cards03-04-spread.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<h3>Moon</h3>
-				<p>an animated composition studying character animation and movement using Autodesk Maya</p>
-				<a class="crop fade three-d" href="src/img/portfolio/art/animation/newRabbitRenders.jpg" data-lightbox="moon" title="Moon: an animated composition">
-					<img src="src/img/portfolio/art/animation/newRabbitRenders.jpg" />
-				</a>
-				<a class="crop fade three-d" href="src/img/portfolio/art/animation/moon.jpg" data-Lightbox="moon" title="Moon: an animated composition">
-					<img src="src/img/portfolio/art/animation/moon.jpg" />
-				</a>
-				<a class="crop fade three-d anim" href="src/img/portfolio/art/animation/bear_walk.gif" data-Lightbox="moon" title="Moon: an animated composition">
-					<img src="src/img/portfolio/art/animation/bear_walk.gif" />
-				</a>
-				<a class="crop fade three-d anim" href="src/img/portfolio/art/animation/laughing_moon.gif" data-Lightbox="moon" title="Moon: an animated composition">
-					<img src="src/img/portfolio/art/animation/laughing_moon.gif" />
-				</a>
 			</div>
 		</div>
 
-		<div id="projects" class="anchor row">
-			<h2>Code Projects</h2>
-
-			<div class="project-card col-md-6">
-				<h3>Hamster Ball Loading Animation</h3>
-				<p class="project-description">An SVG and CSS loading animation</p>
-				<p>
-					<a href="https://codepen.io/bvanbree/pen/KqYqXO">View Code on CodePen</a>
-				</p>
-			</div>
-
-			<div class="project-card col-md-6">
-				<h3>Terrarium Monitor</h3>
-				<p class="project-description">A front-end for a Raspberry Pi project that displays a visualization of temperature and humidity monitor data</p>
-				<p>
-					<a href="https://codepen.io/bvanbree/pen/MJjaQJ">View Code on CodePen</a>
-				</p>
-			</div>
-
-			<div class="project-card col-md-6">
-				<h3>Snackboard</h3>
-				<p class="project-description">A social site for sharing and mapping campus events offering food - this was developed as a final project for a human-computer interaction course</p>
-				<a class="crop fade code" href="src/img/portfolio/code/snackboard.png" data-lightbox="snackboard" title="SnackBoard Homepage">
-					<img src="src/img/portfolio/code/snackboard.png" />
-				</a>
-			</div>
-
+		<div class="footer">
+			<p>Bridget van Breemen - 2019</p>
 		</div>
-
 	</div>
 
-	<div class="footer">
-		<p>Bridget van Breemen - 2017</p>
-	</div>
 </body>
 
 </html>
