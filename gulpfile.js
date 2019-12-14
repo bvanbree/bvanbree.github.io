@@ -1,40 +1,43 @@
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var del = require('del');
-var sass = require('gulp-sass');
-var minifyCSS = require('gulp-minify-css');
-var uglify = require('gulp-uglify');
-var jshint = require('gulp-jshint');
+const { src, dest, watch, series, parallel } = require('gulp');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
 
-gulp.task('styles', function() {
-    del(['dist/css']);
-    gulp.src('src/sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(minifyCSS())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/css'));   
-});
 
-gulp.task('lint', function() {
-  return gulp.src('src/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
-});
+const srcFiles = {
+  scss: 'src/sass/**/*.scss',
+  js: 'src/js/**/*.js'
+}
+const destFiles = {
+  css: 'dist/css',
+  js: 'dist/js'
+}
 
-gulp.task('uglify', function() {
-  return gulp.src('src/js/**/*.js')
+function scssTask() {
+  return src(srcFiles.scss)
+    .pipe(sass())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(destFiles.css)
+    );
+}
+
+function jsTask() {
+  return src([
+    srcFiles.js
+  ])
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist/js'));
-});
+    .pipe(dest(destFiles.js)
+    );
+}
 
-gulp.task('clean', function () {
-  return del(['dist']);
-});
+function watchTask() {
+  watch([srcFiles.scss, srcFiles.js],
+    parallel(scssTask, jsTask)
+  );
+}
 
-gulp.task('build', ['uglify', 'styles']);
-
-gulp.task('watch',function() {
-    gulp.watch('src/sass/**/*.scss',['styles']);
-    gulp.watch('src/js/**/*.js',['lint']);
-});
+exports.default = series(
+  parallel(scssTask, jsTask),
+  watchTask
+);

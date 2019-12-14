@@ -6,6 +6,7 @@ body {
 	background-color:#ffffff;
 	height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px !important;
 }
 
 nav h1 {
@@ -22,18 +23,26 @@ h2 {
 	color:$header-text-color;
 	margin-bottom: 10px;
   padding-left: 15px;
+  font-size: 2em;
 }
 
 h3 {
+  //font-size: 2em;
   margin-bottom: 5px;
 }
 
 p {
-	color:$primary-text-color;
+  color:$primary-text-color;
+  
+  a, a:visited, a:hover {
+    color: $link-text-color;
+    text-decoration: underline;
+  }
 }
 
 a, a:visited, a:hover {
-  color:#000000;
+  color:$link-text-color;
+  text-decoration: underline;
 }
 
 nav {
@@ -93,16 +102,22 @@ header {
 }
 
 .title-image {
-  margin-top: 50px;
+  margin-top: 3em;
 }
 
 .footer {
   margin-top: 30%;
   text-align: center;
+  font-size: 16px;
   
   p {
-    color: #ccc;
+    color: $light-text-color;
   }
+}
+
+.details {
+  font-size: 16px;
+  color: $light-text-color;
 }
 
 .main-section {
@@ -117,19 +132,62 @@ header {
 }
 
 .anchor {
-  padding-top: 50px;
+  padding-top: 5em;
 }
 
 .bottom-border {
-  padding-bottom: 50px;
-  border-bottom: 5px dotted #ccc;
+  padding-bottom: 3em;
+  border-bottom: 5px dotted $lavender;
 }
 
 .project-card {
-  padding-bottom: 20px;
+  padding-bottom: 1em;
 
   p {
     margin-top: 0;
+  }
+}
+
+
+#projects::before,
+#illustration::before,
+#about::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5em;
+  z-index: -1;
+  //transform: rotate(5deg);
+}
+
+#projects::before {
+  background-color: $mint;
+}
+
+#illustration::before {
+  background-color: $pink;
+}
+
+#about::before {
+  background-color: $mint;
+}
+
+.full {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  transition:.5s;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+  -webkit-transition:.5s;
+  
+  img {
+    width: 100%;
+  }
+
+  video {
+    width: 100%;
   }
 }
 
@@ -137,7 +195,7 @@ header {
 	position: relative;
 	display: inline-block;
 	overflow:hidden;
-  margin: 2px 0px;
+  margin: 1em 0;
 	transition:.5s;
 	-o-transition:.5s;
 	-ms-transition:.5s;
@@ -159,6 +217,10 @@ header {
     width: 100%;
     height: auto;
   }
+
+  video {
+    width: 100%
+  }
 }
 
 .crop:hover {
@@ -167,7 +229,7 @@ header {
 
 .fade {
   display:inline-block;
-  opacity: 1;
+  opacity: 0.7;
   transition:.5s;
   -o-transition:.5s;
   -ms-transition:.5s;
@@ -176,13 +238,12 @@ header {
 }
 
 .fade:hover {
-	opacity: 0.6;
+	opacity: 1;
 }
 
 .social {
   position: relative;
   display: inline-block;
-  margin: 1em 0;
   width: 100%;
   text-decoration: none;
 
@@ -190,13 +251,24 @@ header {
     margin-right: 2em;
   }
   
-  a, a:hover, a:visited, a:focus, img, img:hover {
+  a, a:visited {
     text-decoration: none;
     color: #000;
   }
 
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #000;
+
+    img {
+      opacity: 1;
+      animation: bounce 0.3s ease-in forwards;
+    }
+  }
+
   img {
     width: 30px;
+    padding: 1em 0;
   }
 
   img:hover {
@@ -205,8 +277,8 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
-    font-size: 1.5em;
+  nav h1 {
+    font-size: 1.2em;
   }
 
   .self-portrait {
@@ -227,5 +299,50 @@ header {
 
   .self-portrait {
     width: 50%;
+  }
+}
+
+.embedResponsive {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: 0;
+  }
+  60% {
+    margin-top: -8px;
+  }
+  90% {
+    margin-top: -2px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.slideIn::before {
+  animation: slideIn 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    margin-left: -2em;
+    opacity: 0.6;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
   }
 }
