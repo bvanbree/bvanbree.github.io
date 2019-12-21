@@ -86,6 +86,9 @@ header {
   font-size: 16px;
   color: #666; }
 
+.self-portrait {
+  border-radius: 50%; }
+
 .main-section {
   position: relative;
   width: 75%;
