@@ -21,8 +21,6 @@ nav h1 {
 
 h2 {
 	color:$header-text-color;
-	margin-bottom: 10px;
-  padding-left: 15px;
   font-size: 2em;
 }
 
@@ -53,12 +51,24 @@ nav {
   text-align: left;
   
   a, a:visited {
-    text-decoration: underline;
-    color:#bbbbbb;        
+    text-decoration: underline;  
+    color: #cccccc;   
   }
 
   a:hover, a:focus {
     color:#ffffff;
+  }
+
+  a.anchor-link.interactive {
+    color: $mint;
+  }
+
+  a.anchor-link.illustration {
+    color: $pink;
+  }
+
+  a.anchor-link.comics {
+    color: $lavender;
   }
 
   ul {
@@ -103,6 +113,12 @@ header {
 
 .title-image {
   margin-top: 3em;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.title-image.empty {
+  height: 1em;
 }
 
 .footer {
@@ -145,22 +161,18 @@ header {
 
 .project-card {
   padding-bottom: 1em;
-
-  p {
-    margin-top: 0;
-  }
 }
 
 
 #projects::before,
 #illustration::before,
+#comics::before,
 #about::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 5em;
   z-index: -1;
-  //transform: rotate(5deg);
 }
 
 #projects::before {
@@ -169,6 +181,10 @@ header {
 
 #illustration::before {
   background-color: $pink;
+}
+
+#comics::before {
+  background-color: $lavender;
 }
 
 #about::before {
@@ -332,20 +348,5 @@ header {
   }
   100% {
     margin-top: 0;
-  }
-}
-
-.slideIn::before {
-  animation: slideIn 0.5s ease-in-out 0.5s forwards;
-}
-
-@keyframes slideIn {
-  0% {
-    margin-left: -2em;
-    opacity: 0.6;
-  }
-  100% {
-    margin-left: 0;
-    opacity: 1;
   }
 }

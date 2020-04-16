@@ -15,8 +15,6 @@ nav h1 {
 
 h2 {
   color: #000;
-  margin-bottom: 10px;
-  padding-left: 15px;
   font-size: 2em; }
 
 h3 {
@@ -40,9 +38,15 @@ nav {
   text-align: left; }
   nav a, nav a:visited {
     text-decoration: underline;
-    color: #bbbbbb; }
+    color: #cccccc; }
   nav a:hover, nav a:focus {
     color: #ffffff; }
+  nav a.anchor-link.interactive {
+    color: #CAEEDA; }
+  nav a.anchor-link.illustration {
+    color: #F5C8BF; }
+  nav a.anchor-link.comics {
+    color: #CDB6FF; }
   nav ul {
     list-style-type: none;
     margin: 0;
@@ -73,7 +77,12 @@ header {
     margin: 0 30px 0 0; }
 
 .title-image {
-  margin-top: 3em; }
+  margin-top: 3em;
+  max-height: 300px;
+  overflow: hidden; }
+
+.title-image.empty {
+  height: 1em; }
 
 .footer {
   margin-top: 30%;
@@ -107,11 +116,10 @@ header {
 
 .project-card {
   padding-bottom: 1em; }
-  .project-card p {
-    margin-top: 0; }
 
 #projects::before,
 #illustration::before,
+#comics::before,
 #about::before {
   content: '';
   position: absolute;
@@ -124,6 +132,9 @@ header {
 
 #illustration::before {
   background-color: #F5C8BF; }
+
+#comics::before {
+  background-color: #CDB6FF; }
 
 #about::before {
   background-color: #CAEEDA; }
@@ -243,14 +254,3 @@ header {
     margin-top: -2px; }
   100% {
     margin-top: 0; } }
-
-.slideIn::before {
-  animation: slideIn 0.5s ease-in-out 0.5s forwards; }
-
-@keyframes slideIn {
-  0% {
-    margin-left: -2em;
-    opacity: 0.6; }
-  100% {
-    margin-left: 0;
-    opacity: 1; } }

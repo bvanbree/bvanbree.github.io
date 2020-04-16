@@ -12,7 +12,7 @@ _gaq.push(['_trackPageview']);
 
 $(function () {
     var $anchorLinks = $('nav').find('.anchor-link');
-
+    // IMPROVEMENT: smooth scroll with CSS only
     $anchorLinks.click(function (e) {
         e.preventDefault();
 
