@@ -1,12 +1,16 @@
 @import "_colors.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	margin-left: auto;
 	margin-right: auto;
 	background-color:#ffffff;
 	height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 nav h1 {
@@ -163,6 +167,10 @@ header {
   padding-bottom: 1em;
 }
 
+//override simple-lightbox font size
+.slbCaption {
+  font-size: inherit !important;
+}
 
 #projects::before,
 #illustration::before,
