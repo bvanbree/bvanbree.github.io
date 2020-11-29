@@ -1,16 +1,18 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const cleanCSS = require('gulp-clean-css');
 
 
 const srcFiles = {
   scss: 'src/sass/**/*.scss',
+  css: 'src/css/**/*.css',
   js: 'src/js/**/*.js'
 }
 const destFiles = {
-  css: 'dist/css',
-  js: 'dist/js'
+  css: 'public/css',
+  js: 'public/js'
 }
 
 function scssTask() {
@@ -19,6 +21,13 @@ function scssTask() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(destFiles.css)
     );
+}
+
+function cssTask() {
+  return src(srcFiles.css)
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest(destFiles.css));
 }
 
 function jsTask() {
@@ -32,12 +41,12 @@ function jsTask() {
 }
 
 function watchTask() {
-  watch([srcFiles.scss, srcFiles.js],
-    parallel(scssTask, jsTask)
+  watch([srcFiles.css, srcFiles.js],
+    parallel(cssTask, jsTask)
   );
 }
 
 exports.default = series(
-  parallel(scssTask, jsTask),
+  parallel(cssTask, jsTask),
   watchTask
 );

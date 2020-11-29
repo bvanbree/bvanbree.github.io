@@ -7,240 +7,208 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="src/img/favicon.ico">
-
-	<link href="dist/css/base.min.css" rel="stylesheet" type="text/css" />
-	<link href="src/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="src/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
-
-	<link href="dist/simpleLightbox/simpleLightbox.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+	<link rel="shortcut icon" href="public/img/favicon.ico"/>
+	<link href="public/css/main.min.css" rel="stylesheet" type="text/css" />
+	<link href="public/simpleLightbox/simpleLightbox.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
 	<header>
 		<nav>
-			<ul>
-				<li>
-					<h1><a href="">BvB</a></h1>
-				</li>
-				<li>
-					<a href="#projects" class="anchor-link interactive">Interactive</a>
-				</li>
-				<li>
-					<a href="#illustration" class="anchor-link illustration">Illustration</a>
-				</li>
-				<li>
-					<a href="#comics" class="anchor-link comics">Comics</a>
-				</li>
-				<li>
-					<a href="#about" class="anchor-link">About</a>
-				</li>
-			</ul>
+			<a href="">Home</a>
+			<a href="#about" class="anchor-link">About</a>
+			<a href="#projects" class="anchor-link interactive">Interactive</a>
+			<a href="#illustration" class="anchor-link illustration">Illustration</a>
+			<a href="#comics" class="anchor-link comics">Comics</a>
 		</nav>
-
 	</header>
-
-	<div class="landing"></div>
-
-	<div class="title-image">
-		<div class="hidden-xs">
-			<img class="img-responsive" src="src/img/jackalope-crowd-banner.png" />
-		</div>
-		<div class="visible-xs">
-			<img class="img-responsive" src="src/img/jackalope-crowd-banner-sm.png" />
-		</div>
-	</div>
 
 	<div class="main-section">
 
-		<div id="projects" class="anchor bottom-border row">
-			<div class="col-md-12">
-				<h2>Interactive</h2>
+		<div id="about" class="about-section anchor bottom-border">
+
+			<h2>About</h2>
+
+			<img class="self-portrait center-block" src="public/img/avatar_2019.jpg" alt="illustration of Bridget" />
+
+			<p><strong>Bridget van Breemen</strong> is a UI designer, programmer, and
+				multi-media artist based in Chicago. They enjoy creating interactive media, comics, and cartoon
+				animal characters.
+			</p>
+
+			<div class="social">
+				<a href="mailto:bridget.vanbreemen@gmail.com">
+					<img src="public/img/envelope.svg" title="email" alt="email"/>
+				</a>
+				<a href="https://www.linkedin.com/in/bridgetvanbreemen" class="linkedin">
+					<img src="public/img/linkedin.svg" title="LinkedIn" alt="LinkedIn"/>
+				</a>
+				<a href="https://codepen.io/bvanbree/" class="codepen">
+					<img src="public/img/codepen.svg" title="CodePen" alt="CodePen" />
+				</a>
+				<a href="https://github.com/bvanbree" class="github">
+					<img src="public/img/github.svg" title="GitHub" alt="GitHub"/>
+				</a>
+				<a href="https://twitter.com/bvanbree" class="twitter">
+					<img src="public/img/twitter.svg" title="Twitter" alt="Twitter"/>
+				</a>
+				<a href="https://www.instagram.com/themintrabbit/" class="instagram">
+					<img src="public/img/instagram.svg" title="Instagram" alt="Instagram"/>
+				</a>
 			</div>
-			<div class="project-card col-md-12">
+		</div>
+
+		<div id="projects" class="anchor bottom-border">
+			<h2>Interactive</h2>
+
+			<div class="project-section bottom-border">
 				<div class="details-wrapper">
 					<h3>Permian Food Web</h3>
-					<p class="details">Field Museum of Natural History, 2019
-						<br>Role: UX/UI Designer and Software Developer
-					</p>
+					<p>A touch-screen game for the Field Museum of Natural History, 2019</p>
+					<p>Role: UX/UI Designer and Software Developer</p>
+					<p class="small"><i>images & video © Field Museum</i></p>
 				</div>
 
-				<div class="row">
-					<div class="full code">
+				<div class="flex-row">
+					<div class="project-card full code">
 						<video controls>
-							<source src="src/img/portfolio/code/Food_Web_Drag_and_Remove.mp4" type="video/mp4">
+							<source src="public/img/portfolio/code/Food_Web_Drag_and_Remove.mp4" type="video/mp4">
 						</video>
 					</div>
-				</div>
-				<div class="row">
-					<div class="project-card col-md-6">
-						<a class="full code" href="src/img/portfolio/code/FoodWeb_Home.jpg" data-lightbox="slideshow">
-							<img src="src/img/portfolio/code/FoodWeb_Home.jpg" alt="Home Screen" />
-						</a>
-					</div>
-					<div class="project-card col-md-6">
-						<a class="full code" href="src/img/portfolio/code/FoodWeb_IdlePrompt01.jpg"
+
+					<div class="project-card half-width">
+						<a class="full code" href="public/img/portfolio/code/FoodWeb_Home.jpg"
 							data-lightbox="slideshow">
-							<img src="src/img/portfolio/code/FoodWeb_IdlePrompt01.jpg" />
+							<img src="public/img/portfolio/code/FoodWeb_Home.jpg" alt="Home Screen" />
 						</a>
 					</div>
-				</div>
-				<div class="row">
-					<div class="project-card col-md-6">
-						<a class="full code" href="src/img/portfolio/code/Food_Web_Connections_Design_Ideas.jpg"
+					<div class="project-card half-width">
+						<a class="full code" href="public/img/portfolio/code/FoodWeb_IdlePrompt01.jpg"
+							data-lightbox="slideshow">
+							<img src="public/img/portfolio/code/FoodWeb_IdlePrompt01.jpg" />
+						</a>
+					</div>
+
+					<div class="project-card half-width">
+						<a class="full code" href="public/img/portfolio/code/Food_Web_Connections_Design_Ideas.jpg"
 							data-lightbox="slideshow" title="Design concept for the food web connections">
-							<img src="src/img/portfolio/code/Food_Web_Connections_Design_Ideas.jpg"
+							<img src="public/img/portfolio/code/Food_Web_Connections_Design_Ideas.jpg"
 								alt="Design concept for the food web connections" />
 						</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="project-card col-md-12">
+			<div class="project-section">
 				<div class="details-wrapper">
 					<h3>Antarctic Dinosaurs 3D Scan Stations</h3>
-					<p class="details">Field Museum of Natural History, 2018
-						<br>Role: UX/UI Designer and Software Developer
-					</p>
+					<p>A pair of interactive touch-screen explorers for the Field Museum of Natural History, 2018</p>
+					<p>Role: UX/UI Designer and Software Developer</p>
+					<p class="small"><i>images & video © Field Museum</i></p>
 				</div>
 
-				<div class="row">
-					<div class="project-card col-md-6">
-						<a class="full code" href="src/img/portfolio/code/brain-station-forebrain.jpg"
-							data-lightbox="slideshow">
-							<img src="src/img/portfolio/code/brain-station-forebrain.jpg" />
-						</a>
-					</div>
-					<div class="project-card col-md-6">
-						<a class="full code" href="src/img/portfolio/code/skeleton-station-spine.jpg"
-							data-lightbox="slideshow">
-							<img src="src/img/portfolio/code/skeleton-station-spine.jpg" />
-						</a>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="embedResponsive">
+				<div class="flex-row">
+					<div class="project-card full embedResponsive">
 						<iframe src="https://player.vimeo.com/video/358645756" width="640" height="424" frameborder="0"
 							allow="autoplay; fullscreen" allowfullscreen></iframe>
 					</div>
+
+					<div class="project-card half-width">
+						<a class="full code" href="public/img/portfolio/code/brain-station-forebrain.jpg"
+							data-lightbox="slideshow">
+							<img src="public/img/portfolio/code/brain-station-forebrain.jpg" />
+						</a>
+					</div>
+					<div class="project-card half-width">
+						<a class="full code" href="public/img/portfolio/code/skeleton-station-spine.jpg"
+							data-lightbox="slideshow">
+							<img src="public/img/portfolio/code/skeleton-station-spine.jpg" />
+						</a>
+					</div>
 				</div>
 			</div>
 
 		</div>
 
-		<div id="illustration" class="anchor row bottom-border">
-			<div class="col-md-12">
-				<h2>Illustration</h2>
-			</div>
+		<div id="illustration" class="anchor bottom-border">
 
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/floppy_chips.jpg" data-lightbox="slideshow"
-					title="ink and markers on paper, 2019">
-					<img src="src/img/portfolio/art/floppy_chips.jpg" />
-				</a>
-			</div>
+			<h2>Illustration</h2>
 
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/2019_inktober_sample_monster_portraits.jpg"
-					data-lightbox="slideshow" title="monster portraits, 2019">
-					<img src="src/img/portfolio/art/2019_inktober_sample_monster_portraits.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/20190109_aggressiveInline_i.jpg"
-					data-lightbox="slideshow" title="rollerblader, markers on paper, 2019">
-					<img src="src/img/portfolio/art/20190109_aggressiveInline_i.jpg"
-						alt="rollerblader, marker on paper, 2019" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/otter-playmat.jpg" data-lightbox="slideshow"
-					title="B&W illustrated card mat, 2019">
-					<img src="src/img/portfolio/art/otter-playmat.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/bat-portraits-zine-example-pages.jpg"
-					data-lightbox="slideshow" title="bat portraits, 2017">
-					<img src="src/img/portfolio/art/bat-portraits-zine-example-pages.jpg" />
-				</a>
-			</div>
-		</div>
-
-		<div id="comics" class="anchor row bottom-border">
-			<div class="col-md-12">
-				<h2>Comics</h2>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/comics/2019_PokemonNPC_rollerskaters_small.jpg"
-					data-lightbox="slideshow" title="1-page comic for a Pokemon zine, 2019">
-					<img src="src/img/portfolio/art/comics/2019_PokemonNPC_rollerskaters_small.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/comics/mint-rabbit-on-the-moon.jpg"
-					data-lightbox="slideshow" title="">
-					<img src="src/img/portfolio/art/comics/mint-rabbit-on-the-moon.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-6">
-				<a class="full two-d" href="src/img/portfolio/art/sludgefeast.jpg" data-lightbox="slideshow"
-					title="databending/corrupted image files with ink drawings, 2014">
-					<img src="src/img/portfolio/art/sludgefeast.jpg" />
-				</a>
-			</div>
-
-			<div class="project-card col-md-5">
-				<a class="full two-d" href="src/img/portfolio/art/comics/AntiChaosCookingComicBAWG.jpg"
-					data-lightbox="slideshow" title="1-page comic a collective zine, 2019">
-					<img src="src/img/portfolio/art/comics/AntiChaosCookingComicBAWG.jpg" />
-				</a>
-			</div>
-
-		</div>
-
-		<div id="about" class="about-section anchor bottom-border row">
-			<div class="col-md-12">
-				<h2>About</h2>
-			</div>
-			<div class="col-sm-8 col-xs-12">
-				<p><strong>Bridget van Breemen</strong> is an interactive designer and
-					multi-media artist based in Chicago. They currently work at the Field Museum of Natural History,
-					where they build digital interactives. They enjoy cartoons and drawing animal characters.
-				</p>
-				<p>contact: <a href="mailto:bridget.vanbreemen@gmail.com">bridget.vanbreemen@gmail.com</a></p>
-			</div>
-			<div class="col-sm-4 col-xs-8">
-				<img class="self-portrait img-responsive center-block" src="src/img/avatar_2019.jpg"
-					alt="illustration of Bridget" />
-			</div>
-			<div class="col-md-12">
-				<div class="social">
-					<a href="https://www.linkedin.com/in/bridgetvanbreemen" class="fade">
-						<img src="src/img/linkedin.png" title="LinkedIn" />
-						LinkedIn
-					</a>
-					<a href="https://codepen.io/bvanbree/" class="fade">
-						<img src="src/img/codepen.png" title="CodePen" />
-						CodePen
-					</a>
-					<a href="https://www.instagram.com/themintrabbit/" class="fade">
-						<img src="src/img/instagram.png" title="CodePen" />
-						Instagram
-					</a>
-					<a href="https://github.com/bvanbree" class="fade">
-						<img src="src/img/github.png" title="GitHub" />
-						GitHub
+			<div class="flex-row">
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/floppy_chips.jpg" data-lightbox="slideshow"
+						title="personal work, 2019">
+						<img src="public/img/portfolio/art/floppy_chips.jpg" />
 					</a>
 				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/2019_inktober_sample_monster_portraits.jpg"
+						data-lightbox="slideshow" title="personal work, monster portraits, 2019">
+						<img src="public/img/portfolio/art/2019_inktober_sample_monster_portraits.jpg" />
+					</a>
+				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/20190109_aggressiveInline_i.jpg"
+						data-lightbox="slideshow" title="personal work, 2019">
+						<img src="public/img/portfolio/art/20190109_aggressiveInline_i.jpg"
+							alt="rollerblader, marker on paper, 2019" />
+					</a>
+				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/otter-playmat.jpg" data-lightbox="slideshow"
+						title="commissioned card mat illustration, 2019">
+						<img src="public/img/portfolio/art/otter-playmat.jpg" />
+					</a>
+				</div>
+
+				<div class="project-card">
+					<a class="full two-d" href="public/img/portfolio/art/bat-portraits-zine-example-pages.jpg"
+						data-lightbox="slideshow" title="personal work, bat portraits, 2017">
+						<img src="public/img/portfolio/art/bat-portraits-zine-example-pages.jpg" />
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="comics" class="anchor bottom-border">
+
+			<h2>Comics</h2>
+
+			<div class="flex-row">
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/comics/2019_PokemonNPC_rollerskaters_small.jpg"
+						data-lightbox="slideshow" title="1-page comic for a fan-zine, 2019">
+						<img src="public/img/portfolio/art/comics/2019_PokemonNPC_rollerskaters_small.jpg" />
+					</a>
+				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/comics/mint-rabbit-on-the-moon.jpg"
+						data-lightbox="slideshow" title="personal work, 2019">
+						<img src="public/img/portfolio/art/comics/mint-rabbit-on-the-moon.jpg" />
+					</a>
+				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/sludgefeast.jpg" data-lightbox="slideshow"
+						title="databending/corrupted image files with ink drawings, 2014">
+						<img src="public/img/portfolio/art/sludgefeast.jpg" />
+					</a>
+				</div>
+
+				<div class="project-card half-width">
+					<a class="full two-d" href="public/img/portfolio/art/comics/AntiChaosCookingComicBAWG.jpg"
+						data-lightbox="slideshow" title="1-page comic for a collective zine, 2019">
+						<img src="public/img/portfolio/art/comics/AntiChaosCookingComicBAWG.jpg" />
+					</a>
+				</div>
+
 			</div>
 		</div>
 
@@ -249,8 +217,8 @@
 		</div>
 	</div>
 
-	<script src="dist/simpleLightbox/simpleLightbox.min.js" type="text/javascript"></script>
-	<script src="dist/js/main.min.js" type="text/javascript"></script>
+	<script src="public/simpleLightbox/simpleLightbox.min.js" type="text/javascript"></script>
+	<script src="public/js/main.min.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,0 +1,391 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#f3f3f3;
+	height: 100%;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.625em;
+}
+
+h2 {
+	color: #000;
+  font-size: 2.063em;
+}
+
+h3 {
+  margin-bottom: 5px;
+  font-size: 1.625em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+a, a:visited, a:hover {
+  color: #5217cf;
+  text-decoration: underline;
+}
+
+nav {
+  position: relative;
+  text-align: center;
+  background-color: #000;
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4em;
+  white-space: nowrap;
+}
+
+nav a {
+  height: 100%;
+  display: inline-block;
+  line-height: 4em;
+  padding: 0 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s ease-in-out;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+nav a:first-child {
+  margin-left: -0.5em;
+}
+
+nav a, nav a:visited {
+  text-decoration: none;  
+  color: #ffffff;   
+}
+
+nav a:hover, 
+nav a:focus,
+nav a:active {
+  text-decoration: none;
+  background-color: #5217cf;
+  color: #ffffff;
+}
+
+nav a.anchor-link.interactive:hover,
+nav a.anchor-link.interactive:focus,
+nav a.anchor-link.interactive:active {
+  background-color: #CAEEDA;
+  color: #000;
+}
+
+nav a.anchor-link.illustration:hover,
+nav a.anchor-link.illustration:focus,
+nav a.anchor-link.illustration:active {
+  background-color: #F5C8BF;
+  color: #000;
+}
+
+nav a.anchor-link.comics:hover, 
+nav a.anchor-link.comics:focus,
+nav a.anchor-link.comics:active {
+  background-color: #CDB6FF;
+  color: #000;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  z-index: 5;
+}
+
+header img {
+  position:relative;
+  height: 150px;
+  margin: 0 2em 0 0;
+}
+
+.title-image {
+  margin-top: 3em;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.title-image.empty {
+  height: 1em;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.813em;
+  color: #777;
+}
+
+p.small {
+  font-size: 0.813em;
+  color: #777;
+}
+
+.self-portrait {
+  border-radius: 50%;
+  width: 200px;
+}
+
+.main-section {
+  position: relative;
+  width: 80%;
+  padding: 0 2.5% 0 2.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-section {
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.about-section p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anchor {
+  padding-top: 5em;
+}
+
+.bottom-border {
+  padding-bottom: 3em;
+  border-bottom: 5px dotted #CDB6FF;
+}
+
+.project-section {
+  padding-bottom: 1em;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.project-card {
+  padding-bottom: 1em;
+  flex: 0 2 auto;
+  margin-right: 3%;
+}
+
+.project-card.half-width {
+  max-width: 47%;
+}
+
+/** override simple-lightbox font size **/
+.slbCaption {
+  font-size: inherit !important;
+}
+
+#about h2,
+#projects h2,
+#illustration h2,
+#comics h2 {
+  text-align: left;
+  position: relative;
+  display: block;
+}
+
+#about h2::after,
+#projects h2::after,
+#illustration h2::after,
+#comics h2::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -2em;
+  left: -1em;
+  /* clip-path: polygon(0 0, 88% 17%, 95% 80%, 36% 100%); */
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 54%); */
+  height: 5em;
+  width: 4em;
+  bottom: -4em;
+  /* animation: stretch 2s ease infinite; */
+}
+
+#about h2::after {
+  background: #CAEEDA;
+  clip-path: polygon(17% 8%, 86% 15%, 100% 66%, 0% 100%);
+  animation: anotherstretch 2s ease infinite;
+}
+
+#projects h2::after,
+#comics h2::after {
+  background: #CDB6FF;
+  clip-path: polygon(0 0, 88% 17%, 95% 80%, 26% 90%);
+  animation: stretch 2s ease infinite;
+}
+
+#illustration h2::after {
+  background: #F5C8BF;
+  clip-path: polygon(0 0, 88% 17%, 95% 80%, 26% 90%);
+  animation: stretch 2s ease infinite;
+}
+
+@keyframes stretch {
+  25% {
+    transform: rotate(2deg) scaleY(.9) scaleX(1.05);
+  }
+  50% {
+    transform: rotate(-1deg) scaleX(.93);
+    clip-path: polygon(0 0, 76% 26%, 66% 72%, 0% 62%);
+  }
+  75% {
+    transform: rotate(3deg) scale(1.05);
+  }
+}
+
+@keyframes anotherstretch {
+  40% {
+    transform: rotate(2deg) scaleX(.9);
+    clip-path: polygon(0 0, 73% 36%, 96% 76%, 13% 62%);
+  }
+  65% {
+    transform: rotate(-2deg) scaleY(.8);
+  }
+  90% {
+    transform: rotate(3deg) scaleY(1.1);
+  }
+}
+
+.full {
+  position: relative;
+  display: block;
+  margin: 1em 0;
+  transition:.5s;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+  -webkit-transition:.5s;
+}
+
+.full img,
+.full video,
+.full.embedResponsive {
+  width: 100%;
+}
+
+.fade {
+  display:inline-block;
+  opacity: 0.7;
+  transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+.fade:hover {
+	opacity: 1;
+}
+
+.social {
+  width: 100%;
+}
+
+.social a {
+  height: 1.25em;
+  width: 1.25em;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #000;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  box-shadow: -3px 3px 6px #5217cf;
+  transition: 0.3s ease-in-out;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social a:hover,
+.social a:focus,
+.social a:active {
+  background-color: #5217cf;
+}
+.social a.linkedin:hover,
+.social a.linkedin:focus,
+.social a.linkedin:active {
+  background-color: #2867b2;
+}
+
+.social a.twitter:hover,
+.social a.twitter:focus,
+.social a.twitter:active {
+  background-color: #1da1f2;
+}
+
+.social a.instagram:hover,
+.social a.instagram:focus,
+.social a.instagram:active {
+  background-color: #ff00ff;
+}
+
+.social img {
+  width: 100%;
+}
+
+.social img:hover {
+  opacity: 1;
+}
+
+.embedResponsive {
+  overflow: hidden;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+}
+
+.embedResponsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.project-card.embedResponsive {
+  background-color: #333;
+}
+
+@media screen and (min-width: 992px) {
+  .about-section p {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav a {
+    font-size: 0.85em;
+    max-width: 20%;
+  }
+
+  .main-section,
+  nav {
+    width: 90%;
+  }
+
+  .project-card.half-width {
+    max-width: 95%;
+  }
+}
