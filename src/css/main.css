@@ -210,12 +210,9 @@ p.small {
   z-index: -1;
   top: -2em;
   left: -1em;
-  /* clip-path: polygon(0 0, 88% 17%, 95% 80%, 36% 100%); */
-  /* clip-path: polygon(50% 0%, 0% 100%, 100% 54%); */
   height: 5em;
   width: 4em;
   bottom: -4em;
-  /* animation: stretch 2s ease infinite; */
 }
 
 #about h2::after {

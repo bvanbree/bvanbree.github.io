@@ -1,5 +1,4 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-// const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
