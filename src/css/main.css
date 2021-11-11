@@ -78,10 +78,17 @@ nav a:active {
   color: #ffffff;
 }
 
+nav a.anchor-link.about:hover,
+nav a.anchor-link.about:focus,
+nav a.anchor-link.about:active {
+  background-color: #CAEEDA;
+  color: #000
+}
+
 nav a.anchor-link.interactive:hover,
 nav a.anchor-link.interactive:focus,
 nav a.anchor-link.interactive:active {
-  background-color: #CAEEDA;
+  background-color: #CDB6FF;
   color: #000;
 }
 
