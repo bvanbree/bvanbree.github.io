@@ -78,31 +78,24 @@ nav a:active {
   color: #ffffff;
 }
 
-nav a.anchor-link.about:hover,
-nav a.anchor-link.about:focus,
-nav a.anchor-link.about:active {
+nav a.anchor-link.green:hover,
+nav a.anchor-link.green:focus,
+nav a.anchor-link.green:active {
   background-color: #CAEEDA;
   color: #000
 }
 
-nav a.anchor-link.interactive:hover,
-nav a.anchor-link.interactive:focus,
-nav a.anchor-link.interactive:active {
+nav a.anchor-link.purple:hover,
+nav a.anchor-link.purple:focus,
+nav a.anchor-link.purple:active {
   background-color: #CDB6FF;
   color: #000;
 }
 
-nav a.anchor-link.illustration:hover,
-nav a.anchor-link.illustration:focus,
-nav a.anchor-link.illustration:active {
+nav a.anchor-link.pink:hover,
+nav a.anchor-link.pink:focus,
+nav a.anchor-link.pink:active {
   background-color: #F5C8BF;
-  color: #000;
-}
-
-nav a.anchor-link.comics:hover, 
-nav a.anchor-link.comics:focus,
-nav a.anchor-link.comics:active {
-  background-color: #CDB6FF;
   color: #000;
 }
 
@@ -199,19 +192,13 @@ p.small {
   font-size: inherit !important;
 }
 
-#about h2,
-#projects h2,
-#illustration h2,
-#comics h2 {
+.anchor h2 {
   text-align: left;
   position: relative;
   display: block;
 }
 
-#about h2::after,
-#projects h2::after,
-#illustration h2::after,
-#comics h2::after {
+.anchor h2::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -222,20 +209,19 @@ p.small {
   bottom: -4em;
 }
 
-#about h2::after {
+.anchor.green h2::after {
   background: #CAEEDA;
   clip-path: polygon(17% 8%, 86% 15%, 100% 66%, 0% 100%);
   animation: anotherstretch 2s ease infinite;
 }
 
-#projects h2::after,
-#comics h2::after {
+.anchor.purple h2::after {
   background: #CDB6FF;
   clip-path: polygon(0 0, 88% 17%, 95% 80%, 26% 90%);
   animation: stretch 2s ease infinite;
 }
 
-#illustration h2::after {
+.anchor.pink h2::after {
   background: #F5C8BF;
   clip-path: polygon(0 0, 88% 17%, 95% 80%, 26% 90%);
   animation: stretch 2s ease infinite;
