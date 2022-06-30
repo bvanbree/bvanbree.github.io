@@ -49,3 +49,5 @@ exports.default = series(
   parallel(cssTask, jsTask),
   watchTask
 );
+
+exports.cssTask = cssTask;
